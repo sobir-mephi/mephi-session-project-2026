@@ -1,0 +1,13 @@
+    1  lsblk
+    2  sudo fdisk /dev/sdb
+    3  lsblk
+    4  sudo mkfs.ext4 -L MEPHI_WEB /dev/sdb1
+    5  sudo blkid /dev/sdb1
+    6  sudo mkdir /mephi-web
+    7  sudo nano /etc/fstab
+    8  sudo findmnt --verify
+    9  sudo mount /mephi-web
+   10  df -h /mephi-web
+   11  lsblk -f
+   12  cat /etc/fstab
+   13  history > history.out
