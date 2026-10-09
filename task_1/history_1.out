@@ -1,0 +1,17 @@
+    1  ip a
+    2  ip -4 addr
+    3  sudo nmcli con mod "enp0s3" ipv4.method auto
+    4  sudo nmcli con up "enp0s3"
+    5  sudo hostnamectl set-hostname mephi-2026.domain.local
+    6  hostname
+    7  cd ~
+    8  mkdir mephi-session-project-2026
+    9  mkdir task_1
+   10  rm task_1/
+   11  rm -rf  task_1/
+   12  cd mephi-session-project-2026/
+   13  mkdir task_1
+   14  cd task_1/
+   15  ping -c 4 8.8.8.8 > ping.out 
+   16  cat ping.out 
+   17  history > history_1.out 
