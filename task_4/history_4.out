@@ -1,0 +1,16 @@
+    1  sudo systemctl start nginx
+    2  sudo systemctl enable nginx
+    3  systemctl status nginx
+    4  systemctl is-enabled nginx
+    5  journalctl -b -u nginx.service 
+    6  journalctl -b -u nginx.service --no-pager
+    7  journalctl -b -u nginx.service --no-pager > task_4/journalctl.out
+    8  ls
+    9  mkdr task_4
+   10  mkdir task_4
+   11  journalctl -b -u nginx.service --no-pager > task_4/journalctl.out
+   12  cat journalctl.out
+   13  cat task_4/journalctl.out
+   14  history
+   15  cd task_4/
+   16  history > history_4.out
