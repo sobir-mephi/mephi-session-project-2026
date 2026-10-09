@@ -1,0 +1,69 @@
+    1  sudo groupadd -g 5500 developers
+    2  sudo groupadd -g 4444 curators
+    3  getent group developers
+    4  getent group curators
+    5  sudo useradd -m -u 5501 -G developers user1
+    6  id user1
+    7  sudo usermod -u 5501 user1
+    8  id user1
+    9  sudo gpasswd -d user1 students
+   10  id user1
+   11  sudo useradd -m -u 5502 -G developers user2
+   12  sudo useradd -m -u 5503 -G developers user3
+   13  sudo useradd -m -G curators curator1
+   14  sudo useradd -m -G curators curator2
+   15  id user1
+   16  ud user2
+   17  id user2
+   18  id user3
+   19  id curator1
+   20  id curator2
+   21  sudo mkdir -p /data/mephi-2026
+   22  sudo chown root:developers /data/mephi-2026
+   23  sudo chmod 2770 /data/mephi-2026
+   24  sudo dnf install acl -y
+   25  sudo setfacl -m g:curators:rx /data/mephi-2026
+   26  sudo setfacl -d -m g::rwx,g:curators:rx,m::rwx,o::--- /data/mephi-2026
+   27  getfacl /data/mephi-2026
+   28  sudo -u user1 touch /data/mephi-2026/test.txt
+   29  id user1
+   30  sudo usermod -aG developers user1
+   31  sudo -u user1 touch /data/mephi-2026/test.txt
+   32  sudo -u user2 sh -c 'echo hello > /data/mephi-2026/test.txt'
+   33  sudo -u curator1 cat /data/mephi-2026/test.txt
+   34  sudo -u curator1 sh -c 'echo test >> /data/mephi-2026/test.txt'
+   35  which tcpdump
+   36  ls -l $(which tcpdump)
+   37  sudo chgrp developers $(which tcpdump)
+   38  ls -l $(which tcpdump)
+   39  sudo chmod 750 $(which tcpdump)
+   40  ls -l $(which tcpdump)
+   41  sudo setcap cap_net_raw,cap_net_admin=eip $(which tcpdump)
+   42  rpm -q tcpdump
+   43  which tcpdump
+   44  rpm -ql tcpdump
+   45  sudo setcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump
+   46  sudo chmod 750 /usr/sbin/tcpdump
+   47  sudo chgrp developers /usr/sbin/tcpdump
+   48  ls -l /usr/sbin/tcpdump
+   49  getcap /usr/sbin/tcpdump
+   50  sudo setcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump
+   51  getcap /usr/sbin/tcpdump
+   52  ls -l /usr/sbin/tcpdump
+   53  sudo -u user1 tcpdump -i any -c 1 -nn
+   54  getenforce
+   55  sudo nano /etc/selinux/config
+   56  sudo mount /mephi-web
+   57  echo "MEPHI WEB" | sudo tee /mephi-web/index.html
+   58  sudo chmod 755 /mephi-web
+   59  sudo chmod 644 /mephi-web/index.html
+   60  sudo nano /etc/nginx/nginx.conf
+   61  sudo nginx -t
+   62  sudo systemctl restart nginx
+   63  sudo semanage fcontext -a -t httpd_sys_content_t "/mephi-web(/.*)?"
+   64  sudo restorecon -Rv /mephi-web
+   65  curl http://localhost
+   66  mkdir task_5
+   67  cd task_5
+   68  ls
+   69  history > history_5.out

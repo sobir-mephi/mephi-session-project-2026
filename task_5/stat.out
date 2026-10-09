@@ -1,0 +1,9 @@
+  File: /mephi-web
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 8,17	Inode: 2           Links: 3
+Access: (0755/drwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Context: system_u:object_r:httpd_sys_content_t:s0
+Access: 2026-10-09 23:44:11.634469371 +0300
+Modify: 2026-10-09 23:42:23.570748305 +0300
+Change: 2026-10-09 23:44:11.634469371 +0300
+ Birth: 2026-10-09 20:33:59.000000000 +0300
