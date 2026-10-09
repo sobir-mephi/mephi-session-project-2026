@@ -1,0 +1,18 @@
+   94  cd mephi-session-project-2026/task_2
+   95  sudo dnf upgrade --refresh -y
+   96  df -h
+   97  lsblk
+   98  lsblk -f
+   99  sudo dnf install cloud-utils-growpart -y
+  100  sudo growpart -N /dev/sda 4
+  101  sudo growpart /dev/sda 4
+  102  sudo resize2fs /dev/sda4
+  103  df -h
+  104  sudo dnf upgrade --refresh -y
+  105  sudo dnf install nginx libcap-ng-utils -y
+  106  sudo dnf install dnf-plugins-core -y
+  107  dnf download --downloaddir /tmp tcpdump
+  108  rpm -q nginx libcap-ng-utils tcpdump
+  109  dnf history > dnf.out
+  110  cat dnf.out
+  111  history > history_2.out

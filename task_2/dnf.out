@@ -1,0 +1,9 @@
+ID     | Command line                                              | Date and time    | Action(s)      | Altered
+----------------------------------------------------------------------------------------------------------------
+     7 | install nginx libcap-ng-utils -y                          | 2026-10-09 19:42 | Install        |    6   
+     6 | upgrade --refresh -y                                      | 2026-10-09 19:24 | I, O, U        | 1290 EE
+     5 | install cloud-utils-growpart -y                           | 2026-10-09 19:18 | Install        |    1   
+     4 | install nss-pam-ldapd                                     | 2024-11-07 16:27 | I, O           |    2  <
+     3 | autoremove -y --setopt=metadata_expire=-1                 | 2024-10-24 13:17 | Removed        |    4 ><
+     2 | remove -y --setopt=metadata_expire=-1 qemu-guest-agent op | 2024-10-24 13:16 | Removed        |    3 >E
+     1 |                                                           | 2024-10-24 13:07 | Install        | 1941 EE
