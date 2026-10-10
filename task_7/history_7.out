@@ -1,0 +1,8 @@
+    1  clear
+    2  echo "Hello from Student: М265797" | sudo tee /mephi-web/index.html
+    3  cat /mephi-web/index.html
+    4  systemctl is-active nginx
+    5  curl http://localhost/
+    6  curl http://localhost/ > curl.out
+    7  cat curl.out 
+    8  history > history_7.out
