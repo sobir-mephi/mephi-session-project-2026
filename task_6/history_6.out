@@ -1,0 +1,26 @@
+    1  sudo usermod -s /sbin/nologin curator1
+    2  sudo usermod -s /sbin/nologin curator2
+    3  getent passwd curator1
+    4  getent passwd curator2
+    5  getent passwd user1
+    6  sudo -iu curator1
+    7  sudo nano /etc/login.defs
+    8  sudo chage -M 90 user1
+    9  sudo chage -M 90 user2
+   10  sudo chage -M 90 user3
+   11  sudo chage -M 90 curator1
+   12  sudo chage -M 90 curator2
+   13  sudo chage -l user1
+   14  sudo nano /etc/security/pwquality.conf
+   15  grep pam_pwquality /etc/pam.d/system-auth
+   16  sudo chage -l user1
+   17  ls
+   18  mkdir task_7
+   19  cd task_6
+   20  ls
+   21  sudo cp /etc/passwd passwd
+   22  sudo cp /etc/shadow shadow
+   23  sudo cp /etc/security/pwquality.conf pwquality.conf
+   24  ls
+   25  sudo cp /etc/group ~/mephi-session-project-2026/task_5/group
+   26  history > history_6.out
