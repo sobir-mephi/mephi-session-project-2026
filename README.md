@@ -53,12 +53,6 @@ sudo mkdir /mephi-web
 sudo nano /etc/fstab
 ```
 
-В `/etc/fstab` добавил строку:
-
-```fstab
-LABEL=MEPHI_WEB  /mephi-web  ext4  defaults  0  2
-```
-
 Проверил конфигурацию и смонтировал раздел:
 
 ```bash
